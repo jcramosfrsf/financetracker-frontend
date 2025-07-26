@@ -19,6 +19,7 @@ const handleLogout = () => {
         <RouterLink to="/budgets">Budgets</RouterLink>
         <RouterLink to="/categories">Categories</RouterLink>
         <RouterLink to="/transactions">Transactions</RouterLink>
+        <RouterLink to="/analysis">Análisis</RouterLink>
         <a href="#" @click.prevent="handleLogout">Logout</a>
       </nav>
     </div>
