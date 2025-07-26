@@ -22,25 +22,26 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const props = defineProps({
   message: {
     type: String,
-    required: true
+    required: true,
   },
   title: {
     type: String,
-    default: ''
+    default: '',
   },
   type: {
     type: String,
     default: 'info', // success, error, warning, info
-    validator: (value) => ['success', 'error', 'warning', 'info'].includes(value)
+    validator: (value) =>
+      ['success', 'error', 'warning', 'info'].includes(value),
   },
   duration: {
     type: Number,
-    default: 5000 // 5 segundos
+    default: 5000, // 5 segundos
   },
   autoClose: {
     type: Boolean,
-    default: true
-  }
+    default: true,
+  },
 });
 
 const emit = defineEmits(['close']);
@@ -50,7 +51,7 @@ let timeoutId = null;
 
 const show = () => {
   visible.value = true;
-  
+
   if (props.autoClose && props.duration > 0) {
     timeoutId = setTimeout(() => {
       close();
