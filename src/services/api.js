@@ -65,6 +65,12 @@ export default {
   createTransaction(data) {
     return apiClient.post('/transactions/', data);
   },
+  updateTransaction(id, data) {
+    return apiClient.put(`/transactions/${id}/`, data);
+  },
+  deleteTransaction(id) {
+    return apiClient.delete(`/transactions/${id}/`);
+  },
   // Reports
   getReports() {
     return apiClient.get('/reports/');
