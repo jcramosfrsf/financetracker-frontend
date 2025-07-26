@@ -39,6 +39,12 @@ export default {
   createBudget(data) {
     return apiClient.post('/budgets/', data);
   },
+  updateBudget(id, data) {
+    return apiClient.put(`/budgets/${id}/`, data);
+  },
+  deleteBudget(id) {
+    return apiClient.delete(`/budgets/${id}/`);
+  },
   // Categories
   getCategories() {
     return apiClient.get('/categories/');

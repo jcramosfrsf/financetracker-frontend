@@ -1,7 +1,5 @@
-import { ref, createApp } from 'vue';
+import { createApp } from 'vue';
 import Toast from '@/components/Toast.vue';
-
-const toasts = ref([]);
 
 export const useToast = () => {
   const showToast = (options) => {
